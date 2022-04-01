@@ -16,4 +16,6 @@ include_directories(include)
 aux_source_directory(src SOURCES)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
+set(CMAKE_CXX_FLAGS "-g ${CMAKE_CXX_FLAGS}")
+
 target_link_libraries(${PROJECT_NAME} ${DL_LIB} ${PTHREAD_LIB} ${GLEW_LIB} ${GL_LIB} ${X11_LIB} ${XRANDR_LIB} ${XI_LIB})

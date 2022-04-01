@@ -7,7 +7,7 @@
 
 class Log{
     public:
-    Log() = default;
+    Log();
     ~Log() = default;
     void i(const char *msg);
     void w(const char *msg);

@@ -5,7 +5,6 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 
 link_libraries("${PROJECT_SOURCE_DIR}/lib/libglfw.so")
 
-find_library(GLEW_LIB NAMES GLEW glew glew32 glew32s REQUIRED)
 find_library(GL_LIB NAMES GL REQUIRED)
 find_library(X11_LIB NAMES X11 REQUIRED)
 find_library(PTHREAD_LIB NAMES pthread REQUIRED)
@@ -18,4 +17,4 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 set(CMAKE_CXX_FLAGS "-g ${CMAKE_CXX_FLAGS}")
 
-target_link_libraries(${PROJECT_NAME} ${DL_LIB} ${PTHREAD_LIB} ${GLEW_LIB} ${GL_LIB} ${X11_LIB} ${XRANDR_LIB} ${XI_LIB})
+target_link_libraries(${PROJECT_NAME} ${DL_LIB} ${PTHREAD_LIB}  ${GL_LIB} ${X11_LIB} ${XRANDR_LIB} ${XI_LIB})

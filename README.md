@@ -4,10 +4,12 @@
 [or for Chinese](https://learnopengl-cn.github.io/)
 
 ## how to compile/build
-for linux, run commands:
+for linux, make sure you have installed the following libs:
+GL、X11、 pthread、Xrandr、Xi and dl
+then run commands:
 ```shell 
 cd quick-start-learn-project/
-cmake -S . -B build
-cd build && make
+cd build && cmake ..
+make
 ```
 and you can find a executable file named learn_opengl,just run it and have fun!
